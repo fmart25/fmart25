@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<math.h>
+
+//definicion de funciones
+int saca(long int, int);
+long int quita(long int, int);
+int genera(int);
+void generando(long int);
+void minimos();
+
+int main(){
+	
+	minimos();
+	
+	return 1;
+}
+
+int saca(long int pn, int pd){
+	
+	return (int)pn%(int)powl(10,pd);
+	
+}
+
+long int quita(long int pn, int pd){
+	
+	return pn/powl(10,pd);
+	
+}
+
+int genera(int ps){
+	
+	(ps*ps>=100000 && ps*ps<=999999)?
+	
+	(printf("%f\n", saca(quita(ps*ps,1),4)/10000.0),
+	//            445*445
+	//            198025
+	//            19802
+	//             9802
+	ps=saca(quita(ps*ps,1),4)):
+		
+		(printf("%f\n", saca(quita(ps*ps,2),4)/10000.0),
+		ps=saca(quita(ps*ps,2),4)/10000);
+		
+	return ps;
+}
+void generando(long int ps){
+	// 445
+	ps=genera(genera(genera(genera(genera(ps)))));
+	
+	
+}
+void minimos(){
+	//para la semilla
+	int s;
+	//mandamos a pedir la semilla aleatoria
+	printf("dame un numero de 3 a 4 digitos:\n");
+	scanf("%d", &s);
+	(s>=100&& s<=9999)?
+	(generando(s)):
+		printf("%d debe ser de 3 a 4 digitos\n");
+}
