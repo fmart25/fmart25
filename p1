@@ -1,0 +1,12 @@
+#include<stdio.h>
+#define A 22
+#define B 45.7
+#define C 30
+#define D ´g´
+#define E 34.5
+#define F 87
+#define G ´v´
+int main () {
+printf("La respuesta:%d",    A-E+!B+F<=G|C+A-!E+B*F==G*C&&A-E*B-F!=G-C<=~A+E||B*F-G>=C/A*E&B-F==G^C*A-E+B/F>=G~C  );
+return 1;
+}
