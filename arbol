@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+#include <iostream>
+using namespace std;
+
+class padres{
+public:
+    padres(){cout<<"padres"<<endl;
+    cout<<"Mama:sara garcia flores 47 años"<<endl;
+    cout<<"Papa:ricardo martinez escutia 47años"<<endl;}
+padres(int a)
+{
+
+    cout<<"hijos\n"<<endl;}
+};
+
+class Abue:public padres{
+public:
+    Abue(int a)
+{
+    cout<<"Abuelos\n"<<endl;
+    cout<<"Abuelo pat:felix martinez bautista 70 años"<<endl;
+    cout<<"Abuela pat:isabel escutia ortiz 70 años"<<endl;
+    cout<<"Abuelo mat:francisco garcia vega 84 años"<<endl;
+    cout<<"Abuela mat:higinia flores rodriguez 82 años"<<endl;}
+};
+class hijos:public padres{
+public:
+    hijos (int a):padres(a)
+    {
+        cout<<"fabian martinez garcia\n\n"<<endl;
+        cout<<"fernanda martinez garcia\n\n"<<endl;}
+    };
+    int main (){
+    Abue patmat(0);
+    }
